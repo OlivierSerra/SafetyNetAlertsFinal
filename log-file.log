@@ -1,0 +1,593 @@
+2023-10-28T12:17:12.496+02:00 DEBUG 16352 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T12:17:12.911+02:00 DEBUG 16352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T12:17:13.043+02:00 DEBUG 16352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-10-28T12:17:13.067+02:00 DEBUG 16352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T12:17:13.078+02:00 DEBUG 16352 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T12:17:15.814+02:00  INFO 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T12:17:15.814+02:00 DEBUG 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T12:17:15.815+02:00 DEBUG 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T12:17:15.816+02:00 DEBUG 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T12:17:15.817+02:00 DEBUG 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35171251
+2023-10-28T12:17:15.818+02:00 DEBUG 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@b1895af
+2023-10-28T12:17:15.819+02:00 DEBUG 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T12:17:15.820+02:00  INFO 16352 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-10-28T12:19:20.871+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T12:19:20.900+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T12:19:20.936+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:19:20.946+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T12:19:20.974+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:19:28.710+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/person", parameters={}
+2023-10-28T12:19:28.717+02:00  WARN 16352 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-10-28T12:19:28.718+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2023-10-28T12:19:28.728+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2023-10-28T12:19:28.730+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:19:28.740+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:19:28.742+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:19:28 CEST 2023, status=405, error=Method Not Allowed, path=/person}]
+2023-10-28T12:19:28.754+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
+2023-10-28T12:19:33.498+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/person/Zach/Zemicks", parameters={}
+2023-10-28T12:19:33.500+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deleteEmployee(String, String)
+2023-10-28T12:19:33.520+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:19:33.521+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+2023-10-28T12:19:33.522+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:19:39.435+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T12:19:39.436+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T12:19:39.453+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:19:39.463+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:19:39.469+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:19:39.473+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:19:46.530+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : PUT "/person", parameters={}
+2023-10-28T12:19:46.531+02:00  WARN 16352 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-10-28T12:19:46.533+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2023-10-28T12:19:46.535+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2023-10-28T12:19:46.538+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:19:46.540+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:19:46.542+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:19:46 CEST 2023, status=405, error=Method Not Allowed, path=/person}]
+2023-10-28T12:19:46.543+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
+2023-10-28T12:20:08.641+02:00 DEBUG 16352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : DELETE "/person/Zach/Zemicks", parameters={}
+2023-10-28T12:20:08.643+02:00 DEBUG 16352 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deleteEmployee(String, String)
+2023-10-28T12:20:08.644+02:00 DEBUG 16352 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:20:08.644+02:00 DEBUG 16352 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+2023-10-28T12:20:08.645+02:00 DEBUG 16352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:24:38.404+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : PUT "/person/Johnwhoo/Boydo", parameters={}
+2023-10-28T12:24:38.405+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#updatePerson(String, String, Person)
+2023-10-28T12:24:38.410+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1510 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:24:38.414+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+2023-10-28T12:24:38.416+02:00 ERROR 16352 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+	at com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController.updatePerson(PersonController.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-10-28T12:24:38.438+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2023-10-28T12:24:38.441+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:24:38.443+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:24:38.447+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:24:38 CEST 2023, status=500, error=Internal Server Error, path=/person/John (truncated)...]
+2023-10-28T12:24:38.449+02:00 DEBUG 16352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2023-10-28T12:25:26.530+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T12:25:26.532+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T12:25:26.533+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:25:26.534+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:25:26.536+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:25:26.537+02:00 DEBUG 16352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:25:30.254+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T12:25:30.256+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T12:25:30.258+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:25:30.259+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T12:25:30.262+02:00 DEBUG 16352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:25:49.382+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : PUT "/person/Johnwhoo/Boydo", parameters={}
+2023-10-28T12:25:49.384+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#updatePerson(String, String, Person)
+2023-10-28T12:25:49.387+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:25:49.388+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+2023-10-28T12:25:49.391+02:00 ERROR 16352 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+	at com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController.updatePerson(PersonController.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-10-28T12:25:49.409+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2023-10-28T12:25:49.411+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:25:49.412+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:25:49.413+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:25:49 CEST 2023, status=500, error=Internal Server Error, path=/person/John (truncated)...]
+2023-10-28T12:25:49.414+02:00 DEBUG 16352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2023-10-28T12:28:28.688+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/person/%7BfirstName%7D/%7BlastName%7D", parameters={}
+2023-10-28T12:28:28.698+02:00  WARN 16352 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-10-28T12:28:28.702+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2023-10-28T12:28:28.708+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2023-10-28T12:28:28.713+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2023-10-28T12:28:28.766+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2023-10-28T12:28:28.782+02:00 DEBUG 16352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
+2023-10-28T12:28:29.036+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2023-10-28T12:28:29.040+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-10-28T12:28:29.043+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-10-28T12:28:29.044+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2023-10-28T12:28:29.045+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2023-10-28T12:28:29.047+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:28:29.049+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2023-10-28T12:28:29.050+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:28:29 CEST 2023, status=404, error=Not Found, path=/favicon.ico}]
+2023-10-28T12:28:29.053+02:00 DEBUG 16352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2023-10-28T12:29:01.796+02:00 DEBUG 14356 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T12:29:02.337+02:00 DEBUG 14356 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T12:29:02.483+02:00 DEBUG 14356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-10-28T12:29:02.514+02:00 DEBUG 14356 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T12:29:02.529+02:00 DEBUG 14356 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T12:29:04.586+02:00  INFO 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T12:29:04.586+02:00 DEBUG 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T12:29:04.587+02:00 DEBUG 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T12:29:04.587+02:00 DEBUG 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T12:29:04.589+02:00 DEBUG 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7f0f7cd7
+2023-10-28T12:29:04.589+02:00 DEBUG 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@45befa6f
+2023-10-28T12:29:04.590+02:00 DEBUG 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T12:29:04.590+02:00  INFO 14356 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-10-28T12:31:02.635+02:00 DEBUG 9328 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T12:31:02.992+02:00 DEBUG 9328 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T12:31:03.147+02:00 DEBUG 9328 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-10-28T12:31:03.177+02:00 DEBUG 9328 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T12:31:03.192+02:00 DEBUG 9328 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T12:31:05.961+02:00  INFO 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T12:31:05.961+02:00 DEBUG 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T12:31:05.963+02:00 DEBUG 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T12:31:05.964+02:00 DEBUG 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T12:31:05.965+02:00 DEBUG 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bff14ff
+2023-10-28T12:31:05.967+02:00 DEBUG 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@c9a0e25
+2023-10-28T12:31:05.968+02:00 DEBUG 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T12:31:05.969+02:00  INFO 9328 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-10-28T12:34:41.210+02:00 DEBUG 23280 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T12:34:41.614+02:00 DEBUG 23280 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T12:34:41.753+02:00 DEBUG 23280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-10-28T12:34:41.783+02:00 DEBUG 23280 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T12:34:41.798+02:00 DEBUG 23280 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T12:34:44.231+02:00  INFO 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T12:34:44.232+02:00 DEBUG 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T12:34:44.233+02:00 DEBUG 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T12:34:44.233+02:00 DEBUG 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T12:34:44.234+02:00 DEBUG 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@50cc777f
+2023-10-28T12:34:44.235+02:00 DEBUG 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5cd4cf84
+2023-10-28T12:34:44.235+02:00 DEBUG 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T12:34:44.236+02:00  INFO 23280 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-10-28T12:34:52.866+02:00 DEBUG 23280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T12:34:52.885+02:00 DEBUG 23280 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T12:34:52.920+02:00 DEBUG 23280 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:34:52.932+02:00 DEBUG 23280 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T12:34:52.973+02:00 DEBUG 23280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:35:06.088+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : PUT "/person/Johnwhoo/Boydo", parameters={}
+2023-10-28T12:35:06.090+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#updatePerson(String, String, Person)
+2023-10-28T12:35:06.124+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1510 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:35:06.130+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+2023-10-28T12:35:06.132+02:00 ERROR 23280 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+	at com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController.updatePerson(PersonController.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-10-28T12:35:06.165+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2023-10-28T12:35:06.169+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:35:06.181+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:35:06.183+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:35:06 CEST 2023, status=500, error=Internal Server Error, path=/person/John (truncated)...]
+2023-10-28T12:35:06.199+02:00 DEBUG 23280 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2023-10-28T12:35:16.193+02:00 DEBUG 23280 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T12:35:16.195+02:00 DEBUG 23280 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T12:35:16.200+02:00 DEBUG 23280 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:35:16.216+02:00 DEBUG 23280 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:35:16.218+02:00 DEBUG 23280 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:35:16.223+02:00 DEBUG 23280 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:35:24.684+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : PUT "/person/Johnwhoo/Boydo", parameters={}
+2023-10-28T12:35:24.685+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#updatePerson(String, String, Person)
+2023-10-28T12:35:24.687+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1510 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:35:24.688+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+2023-10-28T12:35:24.689+02:00 ERROR 23280 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.Optional.isPresent()" because "p" is null
+	at com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController.updatePerson(PersonController.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-10-28T12:35:24.699+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2023-10-28T12:35:24.701+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T12:35:24.707+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:35:24.708+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 12:35:24 CEST 2023, status=500, error=Internal Server Error, path=/person/John (truncated)...]
+2023-10-28T12:35:24.709+02:00 DEBUG 23280 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2023-10-28T12:37:39.657+02:00 DEBUG 11004 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T12:37:40.060+02:00 DEBUG 11004 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T12:37:40.185+02:00 DEBUG 11004 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-10-28T12:37:40.210+02:00 DEBUG 11004 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T12:37:40.221+02:00 DEBUG 11004 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T12:37:42.842+02:00  INFO 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T12:37:42.843+02:00 DEBUG 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T12:37:42.844+02:00 DEBUG 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T12:37:42.845+02:00 DEBUG 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T12:37:42.846+02:00 DEBUG 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7801f52f
+2023-10-28T12:37:42.847+02:00 DEBUG 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@73228532
+2023-10-28T12:37:42.848+02:00 DEBUG 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T12:37:42.848+02:00  INFO 11004 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-10-28T12:38:04.407+02:00 DEBUG 11004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T12:38:04.424+02:00 DEBUG 11004 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T12:38:04.478+02:00 DEBUG 11004 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:38:04.500+02:00 DEBUG 11004 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:38:04.501+02:00 DEBUG 11004 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T12:38:04.521+02:00 DEBUG 11004 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:38:10.370+02:00 DEBUG 11004 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T12:38:10.373+02:00 DEBUG 11004 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T12:38:10.375+02:00 DEBUG 11004 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:38:10.376+02:00 DEBUG 11004 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T12:38:10.380+02:00 DEBUG 11004 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:38:33.721+02:00 DEBUG 11004 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/person/Zach/Zemicks", parameters={}
+2023-10-28T12:38:33.723+02:00 DEBUG 11004 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deleteEmployee(String, String)
+2023-10-28T12:38:33.736+02:00 DEBUG 11004 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:38:33.737+02:00 DEBUG 11004 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+2023-10-28T12:38:33.737+02:00 DEBUG 11004 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:38:37.987+02:00 DEBUG 11004 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T12:38:37.988+02:00 DEBUG 11004 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T12:38:37.991+02:00 DEBUG 11004 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:38:37.992+02:00 DEBUG 11004 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T12:38:37.994+02:00 DEBUG 11004 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:38:54.891+02:00 DEBUG 11004 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/person/Zach/Zemicks", parameters={}
+2023-10-28T12:38:54.893+02:00 DEBUG 11004 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deleteEmployee(String, String)
+2023-10-28T12:38:54.895+02:00 DEBUG 11004 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:38:54.897+02:00 DEBUG 11004 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+2023-10-28T12:38:54.898+02:00 DEBUG 11004 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T12:39:00.096+02:00 DEBUG 11004 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T12:39:00.098+02:00 DEBUG 11004 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T12:39:00.099+02:00 DEBUG 11004 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T12:39:00.101+02:00 DEBUG 11004 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T12:39:00.105+02:00 DEBUG 11004 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:31:30.633+02:00 DEBUG 17968 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T13:31:31.160+02:00 DEBUG 17968 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T13:31:31.298+02:00 DEBUG 17968 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-10-28T13:31:31.325+02:00 DEBUG 17968 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T13:31:31.336+02:00 DEBUG 17968 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T13:31:33.835+02:00  INFO 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T13:31:33.836+02:00 DEBUG 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T13:31:33.836+02:00 DEBUG 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T13:31:33.837+02:00 DEBUG 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T13:31:33.839+02:00 DEBUG 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@66e6c7b1
+2023-10-28T13:31:33.840+02:00 DEBUG 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@cc8aec0
+2023-10-28T13:31:33.841+02:00 DEBUG 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T13:31:33.842+02:00  INFO 17968 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-10-28T13:31:43.242+02:00 DEBUG 17968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T13:31:43.268+02:00 DEBUG 17968 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T13:31:43.302+02:00 DEBUG 17968 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:31:43.314+02:00 DEBUG 17968 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T13:31:43.345+02:00 DEBUG 17968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:31:50.790+02:00 DEBUG 17968 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T13:31:50.791+02:00 DEBUG 17968 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T13:31:50.816+02:00 DEBUG 17968 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:31:50.837+02:00 DEBUG 17968 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:31:50.840+02:00 DEBUG 17968 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:31:50.847+02:00 DEBUG 17968 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:31:58.557+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : DELETE "/person/Zach/Zemicks", parameters={}
+2023-10-28T13:31:58.562+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-10-28T13:31:58.566+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-10-28T13:31:58.567+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2023-10-28T13:31:58.577+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for DELETE "/error", parameters={}
+2023-10-28T13:31:58.584+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-10-28T13:31:58.599+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:31:58.600+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Oct 28 13:31:58 CEST 2023, status=404, error=Not Found, path=/person/Zach/Zemicks}]
+2023-10-28T13:31:58.616+02:00 DEBUG 17968 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2023-10-28T13:32:09.208+02:00 DEBUG 17968 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/person", parameters={}
+2023-10-28T13:32:09.211+02:00 DEBUG 17968 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deletePerson(Person)
+2023-10-28T13:32:09.214+02:00 DEBUG 17968 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:32:09.215+02:00 DEBUG 17968 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=null, lastName=null, address=null, city=null, zip=null, phone=null, email=null)]
+2023-10-28T13:32:09.217+02:00 DEBUG 17968 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:32:44.190+02:00 DEBUG 17968 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T13:32:44.191+02:00 DEBUG 17968 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T13:32:44.193+02:00 DEBUG 17968 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:32:44.193+02:00 DEBUG 17968 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:32:44.194+02:00 DEBUG 17968 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:32:44.195+02:00 DEBUG 17968 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:33:01.387+02:00 DEBUG 17968 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T13:33:01.388+02:00 DEBUG 17968 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T13:33:01.389+02:00 DEBUG 17968 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:33:01.391+02:00 DEBUG 17968 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T13:33:01.393+02:00 DEBUG 17968 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:33:09.318+02:00 DEBUG 17968 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : DELETE "/person", parameters={}
+2023-10-28T13:33:09.320+02:00 DEBUG 17968 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deletePerson(Person)
+2023-10-28T13:33:09.322+02:00 DEBUG 17968 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:33:09.323+02:00 DEBUG 17968 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=null, lastName=null, address=null, city=null, zip=null, phone=null, email=null)]
+2023-10-28T13:33:09.324+02:00 DEBUG 17968 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:33:13.512+02:00 DEBUG 17968 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T13:33:13.513+02:00 DEBUG 17968 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T13:33:13.515+02:00 DEBUG 17968 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:33:13.516+02:00 DEBUG 17968 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T13:33:13.518+02:00 DEBUG 17968 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:35:23.725+02:00 DEBUG 25408 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T13:35:24.092+02:00 DEBUG 25408 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T13:35:24.241+02:00 DEBUG 25408 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-10-28T13:35:24.276+02:00 DEBUG 25408 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T13:35:24.293+02:00 DEBUG 25408 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T13:35:27.054+02:00  INFO 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T13:35:27.054+02:00 DEBUG 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T13:35:27.055+02:00 DEBUG 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T13:35:27.055+02:00 DEBUG 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T13:35:27.056+02:00 DEBUG 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@48d1ee9b
+2023-10-28T13:35:27.057+02:00 DEBUG 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@24b59e37
+2023-10-28T13:35:27.058+02:00 DEBUG 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T13:35:27.058+02:00  INFO 25408 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-10-28T13:35:34.516+02:00 DEBUG 25408 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T13:35:34.534+02:00 DEBUG 25408 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T13:35:34.561+02:00 DEBUG 25408 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:35:34.581+02:00 DEBUG 25408 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T13:35:34.608+02:00 DEBUG 25408 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:35:45.854+02:00 DEBUG 25408 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T13:35:45.857+02:00 DEBUG 25408 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T13:35:45.875+02:00 DEBUG 25408 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:35:45.891+02:00 DEBUG 25408 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:35:45.896+02:00 DEBUG 25408 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:35:45.900+02:00 DEBUG 25408 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:35:51.631+02:00 DEBUG 25408 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T13:35:51.633+02:00 DEBUG 25408 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T13:35:51.634+02:00 DEBUG 25408 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:35:51.635+02:00 DEBUG 25408 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T13:35:51.636+02:00 DEBUG 25408 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:36:09.982+02:00 DEBUG 25408 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : DELETE "/person", parameters={}
+2023-10-28T13:36:09.984+02:00 DEBUG 25408 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#deletePerson(Person)
+2023-10-28T13:36:09.986+02:00 DEBUG 25408 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:36:09.988+02:00 DEBUG 25408 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:36:09.989+02:00 DEBUG 25408 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T13:36:09.992+02:00 DEBUG 25408 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T13:36:17.248+02:00 DEBUG 25408 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T13:36:17.251+02:00 DEBUG 25408 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T13:36:17.253+02:00 DEBUG 25408 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T13:36:17.254+02:00 DEBUG 25408 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T13:36:17.256+02:00 DEBUG 25408 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:43:59.916+02:00 DEBUG 13620 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-28T14:44:00.829+02:00 DEBUG 13620 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-28T14:44:01.049+02:00 DEBUG 13620 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-10-28T14:44:01.096+02:00 DEBUG 13620 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-10-28T14:44:01.115+02:00 DEBUG 13620 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-28T14:44:04.262+02:00  INFO 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28T14:44:04.263+02:00 DEBUG 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-10-28T14:44:04.264+02:00 DEBUG 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-10-28T14:44:04.266+02:00 DEBUG 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-10-28T14:44:04.267+02:00 DEBUG 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@58ce9dfd
+2023-10-28T14:44:04.269+02:00 DEBUG 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@523c2ebb
+2023-10-28T14:44:04.271+02:00 DEBUG 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-10-28T14:44:04.272+02:00  INFO 13620 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-10-28T14:44:14.056+02:00 DEBUG 13620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T14:44:14.076+02:00 DEBUG 13620 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T14:44:14.116+02:00 DEBUG 13620 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:44:14.134+02:00 DEBUG 13620 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T14:44:14.166+02:00 DEBUG 13620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:44:25.136+02:00 DEBUG 13620 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/person", parameters={}
+2023-10-28T14:44:25.141+02:00 DEBUG 13620 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#addPerson(Person)
+2023-10-28T14:44:25.170+02:00 DEBUG 13620 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T14:44:25.187+02:00 DEBUG 13620 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:44:25.193+02:00 DEBUG 13620 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T14:44:25.196+02:00 DEBUG 13620 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:44:35.406+02:00 DEBUG 13620 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T14:44:35.409+02:00 DEBUG 13620 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T14:44:35.409+02:00 DEBUG 13620 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:44:35.409+02:00 DEBUG 13620 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T14:44:35.416+02:00 DEBUG 13620 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:45:19.942+02:00 DEBUG 13620 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : PUT "/person/Johnwhoo/Boydo", parameters={}
+2023-10-28T14:45:19.945+02:00 DEBUG 13620 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#updatePerson(String, String, Person)
+2023-10-28T14:45:19.961+02:00 DEBUG 13620 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1510 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T14:45:19.963+02:00 DEBUG 13620 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:45:19.965+02:00 DEBUG 13620 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1510 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T14:45:19.968+02:00 DEBUG 13620 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:45:25.898+02:00 DEBUG 13620 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T14:45:25.902+02:00 DEBUG 13620 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T14:45:25.908+02:00 DEBUG 13620 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:45:25.915+02:00 DEBUG 13620 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T14:45:25.919+02:00 DEBUG 13620 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:45:51.617+02:00 DEBUG 13620 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : PUT "/person/Johnwhoo/Boydo", parameters={}
+2023-10-28T14:45:51.619+02:00 DEBUG 13620 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#updatePerson(String, String, Person)
+2023-10-28T14:45:51.621+02:00 DEBUG 13620 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T14:45:51.622+02:00 DEBUG 13620 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:45:51.624+02:00 DEBUG 13620 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [Person(firstName=Johnwhoo, lastName=Boydo, address=1509 Culver St, city=Culver, zip=97451, phone=841 (truncated)...]
+2023-10-28T14:45:51.626+02:00 DEBUG 13620 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-28T14:45:59.040+02:00 DEBUG 13620 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/person", parameters={}
+2023-10-28T14:45:59.041+02:00 DEBUG 13620 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.openclassroom.SafetyNetAlertsEndOfMission.controller.PersonController#persons()
+2023-10-28T14:45:59.042+02:00 DEBUG 13620 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-28T14:45:59.043+02:00 DEBUG 13620 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-10-28T14:45:59.044+02:00 DEBUG 13620 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
