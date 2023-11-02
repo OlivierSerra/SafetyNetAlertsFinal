@@ -1,4 +1,4 @@
-package com.openclassroom.SafetyNetAlertsEndOfMission.repository;
+package com.openclassroom.SafetyNetAlertsEndOfMission.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.Firestation;

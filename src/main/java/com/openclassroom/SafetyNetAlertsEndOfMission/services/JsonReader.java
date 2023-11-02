@@ -1,9 +1,10 @@
-package com.openclassroom.SafetyNetAlertsEndOfMission.repository;
+package com.openclassroom.SafetyNetAlertsEndOfMission.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.Firestation;
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.MedicalRecord;
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.Person;
+
 import org.springframework.stereotype.Component;
 
 import java.io.File;
