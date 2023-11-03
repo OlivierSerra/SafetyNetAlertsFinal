@@ -19,6 +19,8 @@ public class MedicalRecordService {
         this.jsonDataReader = jsonDataReader;
         this.medicalRecords = this.jsonDataReader. getMedicalRecordsData();
     }
+public MedicalRecordService() {
+    }
 /****************************  **************** */
    
 /*
@@ -55,8 +57,8 @@ public class MedicalRecordService {
             MedicalRecord currentMedicalRecordOptional = medicalRecordOptional.get();
 
             currentMedicalRecordOptional.setBirthdate(updatedMedicalRecord.getBirthdate());
-            currentMedicalRecordOptional.setMedications(updatedMedicalRecord.getMedications());
-            currentMedicalRecordOptional.setAllergies(updatedMedicalRecord.getAllergies());
+            //currentMedicalRecordOptional.setMedications(updatedMedicalRecord.getMedications());
+            //currentMedicalRecordOptional.setAllergies(updatedMedicalRecord.getAllergies());
 
             return saveMedicalRecord(currentMedicalRecordOptional);
         }

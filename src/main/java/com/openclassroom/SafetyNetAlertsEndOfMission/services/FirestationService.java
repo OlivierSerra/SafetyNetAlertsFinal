@@ -23,6 +23,9 @@ public class FirestationService {
         this.firestations = this.jsonDataReader.getFirestationsData();
     }
 
+        public FirestationService() {
+    }
+
         /********************* endpoint/firestation   ********************/
 
 /* 
@@ -55,11 +58,9 @@ public class FirestationService {
         Optional<Firestation> firestationOptional = getFirestation(address);
 
         if (firestationOptional.isPresent()) {
-            Firestation currentFirestation = firestationOptional.get();
-
-            currentFirestation.setStation(station);
-        
-            return saveFirestation(currentFirestation);
+            Firestation updatedFirestation = firestationOptional.get();
+            updatedFirestation.setStation(station);
+            return saveFirestation(updatedFirestation);
         }
         return null;
     }

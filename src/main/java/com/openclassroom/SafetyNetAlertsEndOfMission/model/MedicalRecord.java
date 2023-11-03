@@ -16,5 +16,11 @@ public class MedicalRecord {
     private String birthdate;
     private List<String> medications;
     private List<String> allergies;
+    public void setMedications(String medications) {
+    }
+    public void setAllergies(String allergies) {
+    }
+    public void setMedications(String string, String string2) {
+    }
 
 }

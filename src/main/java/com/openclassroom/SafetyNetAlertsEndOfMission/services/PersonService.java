@@ -22,6 +22,9 @@ public class PersonService {
         this.persons = this.jsonDataReader.getPersonsData();
         }
 
+        public PersonService() {
+    }
+
         /********************* endpoint/person   ********************/
 
 /* 
