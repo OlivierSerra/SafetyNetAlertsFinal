@@ -1,7 +1,7 @@
 package com.openclassroom.SafetyNetAlertsEndOfMission.controller;
 
 import java.util.List;
-import java.util.Optional;
+//import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,73 +11,56 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.openclassroom.SafetyNetAlertsEndOfMission.repository.PersonRepository;
-
+import com.openclassroom.SafetyNetAlertsEndOfMission.services.PersonService;
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.Person;
-
 
 @RestController
 public class PersonController {
 
 
     @Autowired
-    private PersonRepository personRepository;
+    private PersonService personService;
 
-    public PersonController(PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    public PersonController(PersonService personService) {
+        this.personService = personService;
     }
 
-/* 
-* This method is used to find the list with all the people  
-*/
+/** This method is used to find the list with all the people *****/
     @GetMapping("/person") 
         public List<Person>persons() {
-            return personRepository.findAll();
+            return personService.findAll();
         }
  
 /*  
- * This méthod is used to add one person in the list
+* This méthod is used to add one person in the list
 */
     @PostMapping("/person")
         public Person addPerson(@RequestBody Person person) {
-            return personRepository.save(person);
+            return personService.save(person);
         }
+
 /*
- * This method is used to delete one person in the list
- */
-    @DeleteMapping("/person")
-	    public Person deletePerson(@RequestBody Person person) {   
-            return personRepository.delete(person);
-        }
-    
-/*This method is used to update person data
- */         
-    @PutMapping("/person/{firstName}/{lastName}")
-        public Person updatePerson(
+* This method is used to delete one person in the list
+*/ 
+    @DeleteMapping("/person/{firstName}/{lastName}")
+    public Person deletePerson(
             @PathVariable("firstName") String firstName,
             @PathVariable("lastName") String lastName,
-            @RequestBody Person updatedPerson) {
-                
-            Optional<Person> personOptional = personRepository.getPerson(firstName, lastName);
-                
-            if (personOptional.isPresent()) {
-                Person currentPerson = personOptional.get();
-            
-                currentPerson.setAddress(updatedPerson.getAddress());
-                currentPerson.setCity(updatedPerson.getCity());
-                currentPerson.setZip(updatedPerson.getZip());
-                currentPerson.setPhone(updatedPerson.getPhone());
-                currentPerson.setEmail(updatedPerson.getEmail());
-                
-                personRepository.save(currentPerson); 
-            
-                return currentPerson;
-                    } else {
-                     
-                return null;
-                    }
-                }
+            @RequestBody Person person) { 
+    //logger.info("you deleted a person");  
+    return personService.delete(firstName, lastName);
+    }
+
+/*
+* This method is used to update info for one person in the list
+*/      
+@PutMapping("/person/{firstName}/{lastName}")
+    public Person updatePerson(
+            @PathVariable("firstName") String firstName,
+            @PathVariable("lastName") String lastName,
+            @RequestBody Person PersonToUpdate) {
+        return personService.update(firstName, lastName, PersonToUpdate);        
+    }
 }
 
 

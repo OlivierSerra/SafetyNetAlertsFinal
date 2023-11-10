@@ -1,68 +1,98 @@
 package com.openclassroom.SafetyNetAlertsEndOfMission.repository;
-
-//import org.slf4j.Logger;
-//import org.springframework.http.HttpEntity;
-//import org.springframework.http.HttpMethod;
-//import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-//import org.springframework.web.client.RestTemplate;
-
+//import com.openclassroom.SafetyNetAlertsEndOfMission.model.MedicalRecord;
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.Person;
-
-//import lombok.extern.slf4j.Slf4j;
-
 import java.util.List;
-//import java.util.Optional;
 import java.util.Optional;
 
-//@Slf4j
 @Component
 @Repository
 public class PersonRepository {
 
     public List<Person> persons;
-    private JsonReader jsonDataReader;
-   Content content;
+    private JsonReader jsonDataReader; 
 
     public PersonRepository(JsonReader jsonDataReader) throws Exception {
         this.jsonDataReader = jsonDataReader;
         this.persons = this.jsonDataReader.getPersonsData();
     }
-
-/* 
- * return all person after interrogation of list Person
-*/
+    
     public List<Person> findAll() {
         return this.persons;
     }
 
-/* 
- * save person object  
-*/
-    public Person save(Person person) {
-        persons.add(person);
-        return person;
-        }
-
-/*
- * delete person 
-*/
-    public Person delete(Person person) {
-        persons.remove(person);
-        return person;
-        }
-
-/*
- * return person if criterias match  
- * 
- */
-    public Optional<Person> getPerson(String firstName, String lastName) {
+    /* find one Person
+    * 
+    */    
+    //fait fonctionner la fonction delete de type person
+    public Person person(String firstName, String lastName) {  
         for (Person person : persons) {
-            if (person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)) {
-                return Optional.of(person); 
+        if (person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)) {
+            return person; 
+        }
+    }
+    return null; 
+    }
+
+    //fait fonctionner la fonction update de type optionnal
+    public Optional<Person> FindByNameFirstAndLastName(String firstName, String lastName) {  
+        for (Person person : persons) {
+        if (person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)) {
+            return Optional.of(person); 
+        }
+    }
+    return Optional.empty(); 
+    }
+
+    /*
+    *Save
+    */
+    public Person save(Person person) {
+        for (Person existingPerson : persons) {
+            if (existingPerson.getFirstName().equals(person.getFirstName()) && existingPerson.getLastName().equals(person.getLastName())) {
+                return existingPerson;
             }
         }
-        return Optional.empty(); 
+        persons.add(person); 
+        return person;
     }
+
+       
+    /*
+    * update
+    */
+    public Person updatePerson(String firstName, String lastName, Person PersonToUpdate) {
+        Optional<Person> personOptional = FindByNameFirstAndLastName(firstName, lastName);
+
+        if (personOptional.isPresent()) {
+            Person updatedPerson = personOptional.get();
+
+            updatedPerson.setAddress(PersonToUpdate.getAddress());
+            updatedPerson.setCity(PersonToUpdate.getCity());
+            updatedPerson.setZip(PersonToUpdate.getZip());
+            updatedPerson.setPhone(PersonToUpdate.getPhone());
+            updatedPerson.setEmail(PersonToUpdate.getEmail());
+
+            return save(updatedPerson);
+        }
+
+        return null;
+    }
+
+
+/*************************************** Delete ******************************** */
+ 
+    public Person deletePerson(String firstName, String lastName) {
+        Person deletedPerson = null;
+        Person PersonToDelete = person(firstName, lastName);
+        for (Person p : this.persons) {
+        if (p.getFirstName().equals(firstName) && p.getLastName().equals(lastName)) {
+            persons.remove(p);
+            return deletedPerson = PersonToDelete; 
+        }
+    }
+    return deletedPerson;
+    }
+
 }

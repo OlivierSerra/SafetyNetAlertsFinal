@@ -21,6 +21,9 @@ import lombok.*;
         private String zip;
         private String phone;
         private String email;
+        public Person get() {
+            return null;
+        }
     }
 
    
