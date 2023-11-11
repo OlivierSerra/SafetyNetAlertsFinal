@@ -1,7 +1,7 @@
 package com.openclassroom.SafetyNetAlertsEndOfMission.repository;
 
 import com.openclassroom.SafetyNetAlertsEndOfMission.model.Person;
-import com.openclassroom.SafetyNetAlertsEndOfMission.services.PersonService;
+import com.openclassroom.SafetyNetAlertsEndOfMission.repository.PersonRepository;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -67,7 +67,7 @@ public class PersonRepositoryTest {
                 "BeertrandLaClasse@email.com");
 
         List<Person> personList = Arrays.asList(Marie, Olivier, Bertrand);
-        PersonRepository personRepository;
+        
     }
 
     @Test

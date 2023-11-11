@@ -1,8 +1,9 @@
-package com.mariemoore.safetynet.controller;
+package com.openclassroom.SafetyNetAlertsEndOfMission.controller;
 
-import com.mariemoore.safetynet.jsonUtils;
-import com.mariemoore.safetynet.model.Person;
-import com.mariemoore.safetynet.service.PersonService;
+import com.openclassroom.SafetyNetAlertsEndOfMission.jsonUtils;
+import com.openclassroom.SafetyNetAlertsEndOfMission.model.Person;
+import com.openclassroom.SafetyNetAlertsEndOfMission.repository.PersonRepository;
+import com.openclassroom.SafetyNetAlertsEndOfMission.services.PersonService;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -16,102 +17,173 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@WebMvcTest(controllers = PersonController.class)
+import java.util.Arrays;
+import java.util.List;
+
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+        
+@WebMvcTest(PersonControllerTest.class)
 public class PersonControllerTest {
-    @Autowired
-    private MockMvc mvc;
 
-    @MockBean
-    PersonService personService;
+    @Mock
+    private PersonService personService;
 
-    private List<Person> personList;
-    private Person john;
-    private Person jacob;
-    private Person tenley;
-
-    @BeforeAll
-    void setup() {
-        john = new Person(
-                "John",
-                "Boyd",
-                "1509 Culver St",
-                "Culver",
-                "97451",
-                "841-874-6512",
-                "jaboyd@email.com");
-        jacob = new Person(
-                "Jacob",
-                "Boyd",
-                "1509 Culver St",
-                "Culver",
-                "97451",
-                "841-874-6513",
-                "drk@email.com");
-
-        tenley = new Person(
-                "Tenley",
-                "Boyd",
-                "1509 Culver St",
-                "Culver",
-                "97451",
-                "841-874-6512",
-                "tenz@email.com");
-
-        personList = Arrays.asList(john, jacob, tenley);
-    }
+    @InjectMocks
+    private PersonControllerTest personControllerTest;
+    private MockMvc mockMvc;
 
     @Test
-    public void getAllPersonsShouldReturnListOfPersons() throws Exception{
-        when(personService.getPersons()).thenReturn(personList);
-        mvc.perform(get("/person/all"))
-                .andDo(print())
+    public void testPersons() throws Exception {
+        // Données de test
+        Person Marie = new Person(
+                "Marie",
+                "Moore",
+                "1509 Main Road",
+                "Culver",
+                "97451",
+                "841-874-6512",
+                "MARIEMOORE@email.com");
+        Person Olivier  = new Person(
+                "Olivier",
+                "Serra",
+                "1550 Main Road",
+                "Culver",
+                "97451",
+                "841-874-6542",
+                "OlivierSerra@email.com");
+        Person Bertrand = new Person(
+                    "Bertrand",
+                    "laClasse",
+                    "1521 Main Road",
+                    "Culver",
+                    "97451",
+                    "841-874-6559",
+                    "BeertrandLaClasse@email.com");        
+        List<Person> personList = Arrays.asList(Marie, Olivier, Bertrand);
+
+        // Définir le comportement du service mocké
+        when(personService.findAll()).thenReturn(personList);
+
+    // Effectuer la requête et vérifier le statut de la réponse
+        mockMvc.perform(get("/person"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(3)))
-                .andExpect(jsonPath("$[0].firstName", is("John")))
-                .andExpect(jsonPath("$[1].firstName", is("Jacob")))
-                .andExpect(jsonPath("$[2].firstName", is("Tenley")));
+                // Vérifier la structure de la réponse JSON, ajustez-la en fonction de votre implémentation
+                .andExpect(jsonPath("$[0].name").value("Marie"))
+                .andExpect(jsonPath("$[1].name").value("Olivier"));
+                .andExpect(jsonPath("$[2].name").value("Bertrand"));
+
+        // Vérifier que la méthode du service a été appelée une fois
+        verify(personService, times(1)).findAll();
     }
 
-    @Test
-    public void addPersonShouldReturnPerson() throws Exception {
-        when(personService.addPerson(john)).thenReturn(john);
-        mvc.perform(post("/person")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(jsonUtils.asJsonString(john)))
-                .andDo(print())
-                .andExpect(status().isOk());
-    }
 
-    @Test
-    public void addPersonWhoAlreadyExistsShouldNotReturnPerson() throws Exception {
-        when(personService.addPerson(john)).thenReturn(null);
-        mvc.perform(post("/person")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(jsonUtils.asJsonString(john)))
-                .andDo(print())
-                .andExpect(status().isNoContent());
-    }
+/************************************* mock et test unitaire    ********************************/
+    /*
+        @Mock
+        private PersonService personService;
+        
+        @InjectMocks
+        private YourController yourController;
 
-    @Test
-    public void updatePersonShouldReturnPerson() throws Exception {
-        when(personService.updatePerson(john)).thenReturn(john);
-        mvc.perform(put("/person")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(jsonUtils.asJsonString(john)))
-                .andDo(print())
-                .andExpect(result -> assertEquals(jsonUtils.asJsonString(john), result.getResponse().getContentAsString()))
-                .andExpect(status().isOk());
-    }
+        private MockMvc mvc;
 
-    @Test
-    public void updatePersonWhoDoesNotExistShouldNotReturnPerson() throws Exception {
+        @MockBean
+        PersonService personService;
+
+        private List<Person> personList;
+        private Person john;
+        private Person jacob;
+        private Person tenley;
+
+        @BeforeAll
+        void setup() {
+            john = new Person(
+                    "John",
+                    "Boyd",
+                    "1509 Culver St",
+                    "Culver",
+                    "97451",
+                    "841-874-6512",
+                    "jaboyd@email.com");
+            jacob = new Person(
+                    "Jacob",
+                    "Boyd",
+                    "1509 Culver St",
+                    "Culver",
+                    "97451",
+                    "841-874-6513",
+                    "drk@email.com");
+
+            tenley = new Person(
+                    "Tenley",
+                    "Boyd",
+                    "1509 Culver St",
+                    "Culver",
+                    "97451",
+                    "841-874-6512",
+                    "tenz@email.com");
+
+            personList = Arrays.asList(john, jacob, tenley);
+        }
+
+        @Test
+        public void getAllPersonsShouldReturnListOfPersons() throws Exception{
+            when(personService.getPersons()).thenReturn(personList);
+            mvc.perform(get("/person/all"))
+                    .andDo(print())
+                    .andExpect(status().isOk())
+                    .andExpect(jsonPath("$", hasSize(3)))
+                    .andExpect(jsonPath("$[0].firstName", is("John")))
+                    .andExpect(jsonPath("$[1].firstName", is("Jacob")))
+                    .andExpect(jsonPath("$[2].firstName", is("Tenley")));
+        }
+
+        @Test
+        public void addPersonShouldReturnPerson() throws Exception {
+            when(personService.addPerson(john)).thenReturn(john);
+            mvc.perform(post("/person")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonUtils.asJsonString(john)))
+                    .andDo(print())
+                    .andExpect(status().isOk());
+        }
+
+        @Test
+        public void addPersonWhoAlreadyExistsShouldNotReturnPerson() throws Exception {
+            when(personService.addPerson(john)).thenReturn(null);
+            mvc.perform(post("/person")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonUtils.asJsonString(john)))
+                    .andDo(print())
+                    .andExpect(status().isNoContent());
+        }
+
+        @Test
+        public void updatePersonShouldReturnPerson() throws Exception {
+            when(personService.updatePerson(john)).thenReturn(john);
+            mvc.perform(put("/person")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonUtils.asJsonString(john)))
+                    .andDo(print())
+                    .andExpect(result -> assertEquals(jsonUtils.asJsonString(john), result.getResponse().getContentAsString()))
+                    .andExpect(status().isOk());
+        }
+
+        @Test
+        public void updatePersonWhoDoesNotExistShouldNotReturnPerson() throws Exception {
         when(personService.updatePerson(john)).thenReturn(null);
         mvc.perform(put("/person")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -139,8 +211,10 @@ public class PersonControllerTest {
                 .andDo(print())
                 .andExpect(status().isNoContent());
     }
-
-    /************************** Test Controller ************************************/
+ */
+    /*
+    ************************* Test Controller ***********************************
+    
 
 
     @Test    
@@ -260,6 +334,11 @@ public class PersonControllerTest {
         assertEquals("841-874-6512", result.getPhone());
         assertEquals("jaboyd@email.com", result.getEmail());
     }
+*/
+/**********************    Mockito test ********************************/
+
+
+
 }
 
 
